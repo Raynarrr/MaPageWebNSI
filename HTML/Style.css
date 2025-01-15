@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+}
+
+img {
+    border: 10px solid;
+    border-color: blue;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 100px;
+}

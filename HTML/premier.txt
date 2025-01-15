@@ -1,0 +1,82 @@
+Chapitre: le langage HTML
+
+1. Historique:
+19970 - 1980: développement des réseaux informatiques
+=> USA: ARPANET
+Les ordinateurs apprennent à communiquer entre eux en utilisant des langages (des protocoles) tels que TCP/IP
+
+1990: c'est la naissance du protocole HTTP qui permet à des machines d'échanger du texte "amelioré".
+=> Tim Berners LEE et Robert CAILLIAU
+=> Texte amélioré => texte avec lequel l'utilisateur peut intéragir => c'est de l'HYPERTEXT.
+
+Pour écrire un fichier de texte amélioré, il suffit de lui coller l'extension .html
+
+2. Le langage HTML
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+HTML HyperText Markup Language
+Il s'agit d'un langage déclaratif qui indique au navigateur (Firefox, Chrome, ...) ce que l'utilisateur doit voir
+
+Pour celan on utilise un éditeur de texte/code (Visual Studio Code, SublimText, Vim...).
+On (le développeur) se sert des balises pour indiquer ce que l'on veut.
+
+Il existe deux grand type de balises:
+    - Les balises pairées/couplées (<body></body>)
+    - Les balises orphelines (<br>)
+
+Remarques:
+* La structure minimale d'un fichier html devrait ressembler à:
+
+<html>
+<head>
+    Ici la partie pour les machines 
+</head>
+<body>
+    Ici la partie des utilisateurs
+</body>
+</html>
+
+* Une balise <X></X> ouvert avant une balise <Y></Y> doit être fermée après.
+
+* Un utilisateur peut accéder au code HTML d'une page depuis son navigateur (ctrl + u) Il est possible d'inspecter un élément d'une page.
+
+* Quelques balises simples à connaître:
+    - <p></p> pour pour un paragraphe avec un saut de ligne
+    - <ul></ul> pour une liste non ordonée
+    - <ol></ol> pour une liste ordonée
+    - <li></li> pour les items d'une liste
+
+Remarque: Trés souvent, les balises ouvrantes (ou orphelines), possède un ou plusieurs attributs. Certain attribut sont spécifiques à un type de balise, d'autres sont généraux.
+
+Ex:
+- spécifiques: href pour <a></a>
+<a href="adresseDuFichier></a>
+
+- généraux: id et class
+<p id="unTruc" class="unAutreTruc"></p>
+
+Pour des raisons pratiques, onclasse souvent les fichier dans des dossier différents. Le dossier courant s'appelle ./ mais il n'est pas nécéssaire de toujours l'indiquer. La recherche se faire dans ./ par défaut.
+
+Remarque: bien que conseillé, le symbole ./ est facultatif. On peut alors atteindre tous les fichiers ou les dossiers qui sont plus bas dans l'arborescence
+
+Pour remonter dans l'arborescence et atteindre le dossier du niveau juste supérieur, on écrit ../
+Pour remonter de deux niveau, c'est ../../
+etc...
+
+Un chemin vers un fichier commençant par ./ ou ../ est appelé chemin relatif.
+
+3. Un fichier index.html
+En général, la page d'accueil d'un site est appelée "Index.html"
+
+- Avec des images:
+C'est la balise orpheline <img> qui permet d'insérer une image. Elle s'accompagne obligatoirement de l'attribut src avec l'adresse vers le fichier image. Parfois, on ajoute l'attribut alt en cas d'erreur de chargement de l'image.
+
+ex: <img src="leLienDeL-Image" alt"UneImage">
+
+- Avec des tabbleau... sans bordures
+Pour insérer un tableau, on utilise la balise <table></table> puis n définit une ligne <Tr></Tr> puis on définit une case <td></td>
+
+Pour donner plus de style (bordures, couleurs, position,...) à une page, il faut utiliser le langage CSS.
+On peut cependant definir des cases d'en tête avec <th></th>
+
+- Avec des titres:
